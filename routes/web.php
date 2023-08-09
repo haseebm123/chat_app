@@ -28,7 +28,10 @@ Route::get('/', function () {
     return  redirect()->route('admin.dashboard');
 });
 
-Auth::routes();
+Route::get('/web-socket', function () {
+    return  view('welcome');
+});
+// Auth::routes();
 
 
 
