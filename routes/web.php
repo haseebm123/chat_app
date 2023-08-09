@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\UserPatternController;
+use App\Http\Controllers\ChatAppController;
 
 
 // For User
@@ -21,6 +22,13 @@ use App\Http\Controllers\Admin\RoleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('chat',[ChatAppController::class,'index']) ;
+Route::get('chat-list',[ChatAppController::class,'chatList'])->name('chat.list') ;
+
+
+
+
+
 Route::get('/n', function () {
     return view('admin.layouts.master1');
 });
@@ -28,10 +36,6 @@ Route::get('/', function () {
     return  redirect()->route('admin.dashboard');
 });
 
-Route::get('/web-socket', function () {
-    return  view('welcome');
-});
-// Auth::routes();
 
 
 

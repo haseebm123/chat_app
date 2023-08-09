@@ -94,10 +94,10 @@ class RolesAndPermissionsSeeder extends Seeder
 
 
 
-         $role = Role::create(['name' => 'admin', 'slug' => 'admin','display_name' =>'Admin']);
-         $role->givePermissionTo(Permission::all());
-         $role1 = Role::create(['name' => 'user', 'slug' => 'user','display_name' =>'User']);
-         $role2 = Role::create(['name' => 'service_provider', 'slug' => 'service-provider','display_name' =>'Service Provider']);
+        //  $role = Role::create(['name' => 'admin', 'slug' => 'admin','display_name' =>'Admin']);
+        //  $role->givePermissionTo(Permission::all());
+        //  $role1 = Role::create(['name' => 'user', 'slug' => 'user','display_name' =>'User']);
+        //  $role2 = Role::create(['name' => 'service_provider', 'slug' => 'service-provider','display_name' =>'Service Provider']);
 
          $user = \App\Models\User::create([
             'name' => 'Admin',
@@ -113,7 +113,7 @@ class RolesAndPermissionsSeeder extends Seeder
              'updated_at' => '2019-11-30 18:24:06',
          ]);
 
-         $user->assignRole($role->name);
+        //  $user->assignRole('admin');
 
          $user = \App\Models\User::create([
             'name' => 'User',
@@ -128,7 +128,7 @@ class RolesAndPermissionsSeeder extends Seeder
              'created_at' => NULL,
              'updated_at' => '2019-11-30 18:24:06',
          ]);
-         $user->assignRole($role1->name);
+        //  $user->assignRole('user');
 
          $user = \App\Models\User::create([
             'name' => 'Service Provider',
@@ -144,6 +144,6 @@ class RolesAndPermissionsSeeder extends Seeder
              'created_at' => NULL,
              'updated_at' => '2019-11-30 18:24:06',
          ]);
-         $user->assignRole($role2->name);
+        //  $user->assignRole('service_provider');
     }
 }
