@@ -21,4 +21,7 @@ Broadcast::channel('users-list',function($user){
     return $user;
 });
 
+Broadcast::channel('broadcast-message',function($user){
+    return $user;
+});
 // Broadcast::channel('users-list1',[ChatAppController::class,'userList']);

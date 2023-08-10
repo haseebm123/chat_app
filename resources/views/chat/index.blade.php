@@ -1067,7 +1067,7 @@
                                 <span class="mb-1 start-chat-icon feather icon-message-square"></span>
                                 <h4 class="py-50 px-1 sidebar-toggle start-chat-text">Start Conversation</h4>
                             </div>
-                            <div class="active-chat d-none">
+                            <div class="active-chat">
                                 <div class="chat_navbar">
                                     <header class="chat_header d-flex justify-content-between align-items-center p-1">
                                         <div class="vs-con-items d-flex align-items-center">
@@ -1086,7 +1086,7 @@
                                 </div>
                                 <div class="user-chats">
                                     <div class="chats">
-                                        <div class="chat">
+                                        {{-- <div class="chat">
                                             <div class="chat-avatar">
                                                 <a class="avatar m-0" data-toggle="tooltip" href="#"
                                                     data-placement="right" title="" data-original-title="">
@@ -1120,101 +1120,17 @@
                                         </div>
                                         <div class="divider">
                                             <div class="divider-text">Yesterday</div>
-                                        </div>
-                                        <div class="chat">
-                                            <div class="chat-avatar">
-                                                <a class="avatar m-0" data-toggle="tooltip" href="#"
-                                                    data-placement="right" title="" data-original-title="">
-                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
-                                                        alt="avatar" height="40" width="40" />
-                                                </a>
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="chat-content">
-                                                    <p>Absolutely!</p>
-                                                </div>
-                                                <div class="chat-content">
-                                                    <p>Vuexy admin is the responsive bootstrap 4 admin template.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat chat-left">
-                                            <div class="chat-avatar">
-                                                <a class="avatar m-0" data-toggle="tooltip" href="#"
-                                                    data-placement="left" title="" data-original-title="">
-                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
-                                                        alt="avatar" height="40" width="40" />
-                                                </a>
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="chat-content">
-                                                    <p>Looks clean and fresh UI.</p>
-                                                </div>
-                                                <div class="chat-content">
-                                                    <p>It's perfect for my next project.</p>
-                                                </div>
-                                                <div class="chat-content">
-                                                    <p>How can I purchase it?</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat">
-                                            <div class="chat-avatar">
-                                                <a class="avatar m-0" data-toggle="tooltip" href="#"
-                                                    data-placement="right" title="" data-original-title="">
-                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
-                                                        alt="avatar" height="40" width="40" />
-                                                </a>
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="chat-content">
-                                                    <p>Thanks, from ThemeForest.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat chat-left">
-                                            <div class="chat-avatar">
-                                                <a class="avatar m-0" data-toggle="tooltip" href="#"
-                                                    data-placement="left" title="" data-original-title="">
-                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
-                                                        alt="avatar" height="40" width="40" />
-                                                </a>
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="chat-content">
-                                                    <p>I will purchase it for sure.</p>
-                                                </div>
-                                                <div class="chat-content">
-                                                    <p>Thanks.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat">
-                                            <div class="chat-avatar">
-                                                <a class="avatar m-0" data-toggle="tooltip" href="#"
-                                                    data-placement="right" title="" data-original-title="">
-                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
-                                                        alt="avatar" height="40" width="40" />
-                                                </a>
-                                            </div>
-                                            <div class="chat-body">
-                                                <div class="chat-content">
-                                                    <p>Great, Feel free to get in touch on</p>
-                                                </div>
-                                                <div class="chat-content">
-                                                    <p>https://pixinvent.ticksy.com/</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </div> --}}
+
                                     </div>
                                 </div>
                                 <div class="chat-app-form">
-                                    <form class="chat-app-input d-flex" onsubmit="enter_chat();"
+                                    <form id="chat-form" class="chat-app-input d-flex" onsubmit="enter_chat();"
                                         action="javascript:void(0);">
                                         <input type="text" class="form-control message mr-1 ml-50"
-                                            id="iconLeft4-1" placeholder="Type your message">
-                                        <button type="button" class="btn btn-primary send"
-                                            onclick="enter_chat();"><i class="fa fa-paper-plane-o d-lg-none"></i>
+                                            id="message" placeholder="Type your message">
+                                        <button type="submit" class="btn btn-primary send">
+                                            <i class="fa fa-paper-plane-o d-lg-none"></i>
                                             <span class="d-none d-lg-block">Send</span></button>
                                     </form>
                                 </div>
@@ -1286,7 +1202,13 @@
     <script src="../../../app-assets/js/scripts/pages/app-chat.js"></script>
 
     <!-- END: Page JS-->
-
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
     <script type="module">
         Echo.join('users-list')
             .here((users) => {
@@ -1306,28 +1228,153 @@
 
                 // console.log(users);
             });
+        Echo.private('broadcast-message')
+            .listen('.getChatMessage', (data) => {
+                console.log('sender_id',sender_id);
+                console.log('receiver_id',data.chat.receiver_id);
+                console.log(data);
+                if (sender_id == data.chat.receiver_id && receiver_id == data.chat.sender_id) {
+                    console.log('ture');
+                    // let html = '<div class="chat-content">' + "<p>" + data.chat.message + "</p>" + "</div>";
+                    let html = `
+                        <div class="chat chat-left">
+                            <div class="chat-avatar">
+                                <a class="avatar m-0" data-toggle="tooltip" href="#"
+                                    data-placement="left" title="" data-original-title="">
+                                    <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
+                                        alt="avatar" height="40" width="40" />
+                                </a>
+                            </div>
+                            <div class="chat-body">
+
+                                <div class="chat-content">
+                                    ${ data.chat.message }
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    $(".user-chats").children('.chats').append(html);
+                            $(".user-chats").scrollTop($(".user-chats > .chats").height());
+                }
+
+
+            });
     </script>
 
     <script>
-        $(document).on('click','.user-list',function(){
+        function loadOldChats() {
+            $.ajax({
+                type: "POST",
+                url: "{{ route('load.chat') }}",
+                data: {
+                    sender_id: sender_id,
+                    receiver_id: receiver_id,
+                },
+                success: function(res) {
+                    if (res.success) {
+                        let html = '';
+                        for (let index = 0; index < res.data.length; index++) {
+                            let data = res.data[index];
+                            console.log(data);
+
+                            if (data.sender_id == sender_id) {
+
+                                html += `
+                                    <div class="chat chat-left">
+                                        <div class="chat-avatar">
+                                            <a class="avatar m-0" data-toggle="tooltip" href="#"
+                                                data-placement="left" title="" data-original-title="">
+                                                <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
+                                                    alt="avatar" height="40" width="40" />
+                                            </a>
+                                        </div>
+                                        <div class="chat-body">
+
+                                            <div class="chat-content">
+                                                ${ data.message }
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }else{
+                                 html += `
+                                    <div class="chat">
+                                        <div class="chat-avatar">
+                                            <a class="avatar m-0" data-toggle="tooltip" href="#"
+                                                data-placement="left" title="" data-original-title="">
+                                                <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
+                                                    alt="avatar" height="40" width="40" />
+                                            </a>
+                                        </div>
+                                        <div class="chat-body">
+
+                                            <div class="chat-content">
+                                                ${ data.message }
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }
+
+                        }
+
+                        $(".user-chats").children('.chats').append(html);
+                        $(".user-chats").scrollTop($(".user-chats > .chats").height());
+                    } else {
+                        alert(res.data)
+                    }
+                }
+            });
+        }
+        $(document).ready(function () {
+
+        });
+        $(document).on('click', '.user-list', function() {
             var getId = $(this).attr('data-id');
             $('.start-chat-area').addClass('d-none');
             $('.active-chat').removeClass('d-none');
-            console.log(getId);
+            receiver_id = getId;
+            loadOldChats();
         })
-        // $(".user-list").on("click", function() {
-        //     alert('aaa');
-        //     // console.log($(this).text());
-        // });
-        // $(".user-list-all").click(function(e) {
-        //     // start-chat-area
-        //     // active-chat
-        //     // var getId = $(this).attr('data-id');
-        //     // $('.start-chat-area').addClass('d-none');
-        //     // $('.active-chat').removeClass('d-none');
-        //     // console.log(getId);
 
-        // });
+        function sendMessage(message) {
+            $.ajax({
+                type: "POST",
+                url: "{{ route('save.chat') }}",
+                data: {
+                    sender_id: sender_id,
+                    receiver_id: receiver_id,
+                    message: message
+                },
+                success: function(res) {
+                    if (res.success == true) {
+                        console.log(res);
+                        // var html = '<div class="chat-content">' + "<p>" + message + "</p>" + "</div>";
+                        var html = `
+                            <div class="chat">
+                                <div class="chat-avatar">
+                                    <a class="avatar m-0" data-toggle="tooltip" href="#"
+                                        data-placement="right" title="" data-original-title="">
+                                        <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
+                                            alt="avatar" height="40" width="40" />
+                                    </a>
+                                </div>
+                                <div class="chat-body">
+                                    <div class="chat-content">
+                                        <p>${message}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        $(".user-chats").children('.chats').append(html);
+                        $(".message").val("");
+                        $(".user-chats").scrollTop($(".user-chats > .chats").height());
+                    } else {
+                        alert(res.msg)
+                    }
+                }
+            });
+        }
     </script>
 </body>
 <!-- END: Body-->

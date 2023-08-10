@@ -142,3 +142,5 @@ function joinUser(user) {
 function leaveUser(user) {
     $("#user-list" + user.id).remove();
 }
+
+

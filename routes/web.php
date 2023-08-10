@@ -24,7 +24,8 @@ use App\Http\Controllers\Admin\RoleController;
 */
 Route::get('chat',[ChatAppController::class,'index']) ;
 Route::get('chat-list',[ChatAppController::class,'chatList'])->name('chat.list') ;
-
+Route::post('/save-chat',[ChatAppController::class,'saveChat'])->name('save.chat');
+Route::post('/load-chat',[ChatAppController::class,'loadChat'])->name('load.chat');
 
 
 
