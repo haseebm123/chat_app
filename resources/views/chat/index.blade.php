@@ -13,30 +13,30 @@
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Chat Application - Vuexy - Bootstrap HTML admin template</title>
-    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ asset('app-assets/images/ico/apple-icon-120.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('app-assets/images/ico/favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/vendors.min.css')}}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/bootstrap-extended.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/colors.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/components.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/dark-layout.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/themes/semi-dark-layout.css')}}">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-chat.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/menu/menu-types/vertical-menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/core/colors/palette-gradient.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/css/pages/app-chat.css')}}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
     <!-- END: Custom CSS-->
     @vite('resources/js/app.js')
     <script src="{{ asset('js/custom.js') }}"></script>
@@ -205,7 +205,7 @@
                                 data-toggle="dropdown">
                                 <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John
                                         Doe</span><span class="user-status">Available</span></div><span><img
-                                        class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.jpg"
+                                        class="round" src="{{ asset('app-assets/images/portrait/small/avatar-s-11.jpg')}}"
                                         alt="avatar" height="40" width="40"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item"
@@ -230,7 +230,7 @@
         <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a
                 class="d-flex align-items-center justify-content-between w-100" href="#">
                 <div class="d-flex">
-                    <div class="mr-50"><img src="../../../app-assets/images/icons/xls.png" alt="png"
+                    <div class="mr-50"><img src="{{ asset('app-assets/images/icons/xls.png')}}" alt="png"
                             height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Two new item submitted</p><small
@@ -241,7 +241,7 @@
         <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a
                 class="d-flex align-items-center justify-content-between w-100" href="#">
                 <div class="d-flex">
-                    <div class="mr-50"><img src="../../../app-assets/images/icons/jpg.png" alt="png"
+                    <div class="mr-50"><img src="{{ asset('app-assets/images/icons/jpg.png')}}" alt="png"
                             height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd
@@ -252,7 +252,7 @@
         <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a
                 class="d-flex align-items-center justify-content-between w-100" href="#">
                 <div class="d-flex">
-                    <div class="mr-50"><img src="../../../app-assets/images/icons/pdf.png" alt="png"
+                    <div class="mr-50"><img src="{{ asset('app-assets/images/icons/pdf.png')}}" alt="png"
                             height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital
@@ -263,7 +263,7 @@
         <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a
                 class="d-flex align-items-center justify-content-between w-100" href="#">
                 <div class="d-flex">
-                    <div class="mr-50"><img src="../../../app-assets/images/icons/doc.png" alt="png"
+                    <div class="mr-50"><img src="{{ asset('app-assets/images/icons/doc.png')}}" alt="png"
                             height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web
@@ -277,7 +277,7 @@
         <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a
                 class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
                 <div class="d-flex align-items-center">
-                    <div class="avatar mr-50"><img src="../../../app-assets/images/portrait/small/avatar-s-8.jpg"
+                    <div class="avatar mr-50"><img src="{{ asset('app-assets/images/portrait/small/avatar-s-8.jpg')}}"
                             alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
@@ -287,7 +287,7 @@
         <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a
                 class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
                 <div class="d-flex align-items-center">
-                    <div class="avatar mr-50"><img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
+                    <div class="avatar mr-50"><img src="{{ asset('app-assets/images/portrait/small/avatar-s-1.jpg')}}"
                             alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd
@@ -298,7 +298,7 @@
         <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a
                 class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
                 <div class="d-flex align-items-center">
-                    <div class="avatar mr-50"><img src="../../../app-assets/images/portrait/small/avatar-s-14.jpg"
+                    <div class="avatar mr-50"><img src="{{ asset('app-assets/images/portrait/small/avatar-s-14.jpg')}}"
                             alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing
@@ -309,7 +309,7 @@
         <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a
                 class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
                 <div class="d-flex align-items-center">
-                    <div class="avatar mr-50"><img src="../../../app-assets/images/portrait/small/avatar-s-6.jpg"
+                    <div class="avatar mr-50"><img src="{{ asset('app-assets/images/portrait/small/avatar-s-6.jpg')}}"
                             alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web
@@ -333,7 +333,7 @@
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto"><a class="navbar-brand"
-                        href="../../../html/ltr/vertical-menu-template-semi-dark/index.html">
+                        href="{{ asset('html/ltr/vertical-menu-template-semi-dark/index.html')}}">
                         <div class="brand-logo"></div>
                         <h2 class="brand-text mb-0">Vuexy</h2>
                     </a></li>
@@ -631,21 +631,21 @@
                             data-i18n="Starter kit">Starter kit</span></a>
                     <ul class="menu-content">
                         <li><a
-                                href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-2-columns.html"><i
+                                href="{{ asset('starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-2-columns.html')}}"><i
                                     class="feather icon-circle"></i><span class="menu-item" data-i18n="2 columns">2
                                     columns</span></a>
                         </li>
                         <li><a
-                                href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-fixed-navbar.html"><i
+                                href="{{ asset('starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-fixed-navbar.html')}}"><i
                                     class="feather icon-circle"></i><span class="menu-item"
                                     data-i18n="Fixed navbar">Fixed navbar</span></a>
                         </li>
                         <li><a
-                                href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-floating-navbar.html"><i
+                                href="{{ asset('starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-floating-navbar.html')}}"><i
                                     class="feather icon-circle"></i><span class="menu-item"
                                     data-i18n="Floating navbar">Floating navbar</span></a>
                         </li>
-                        <li><a href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-fixed.html"><i
+                        <li><a href="{{ asset('starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-fixed.html')}}"><i
                                     class="feather icon-circle"></i><span class="menu-item"
                                     data-i18n="Fixed layout">Fixed layout</span></a>
                         </li>
@@ -816,7 +816,7 @@
                             </span>
                             <div class="header-profile-sidebar">
                                 <div class="avatar">
-                                    <img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg"
+                                    <img src="{{ asset('app-assets/images/portrait/small/avatar-s-11.jpg')}}"
                                         alt="user_avatar" height="70" width="70">
                                     <span class="avatar-status-online avatar-status-lg"></span>
                                 </div>
@@ -899,7 +899,7 @@
                             <div class="d-flex align-items-center">
                                 <div class="sidebar-profile-toggle position-relative d-inline-flex">
                                     <div class="avatar">
-                                        <img src="../../../app-assets/images/portrait/small/avatar-s-11.jpg"
+                                        <img src="{{ asset('app-assets/images/portrait/small/avatar-s-11.jpg')}}"
                                             alt="user_avatar" height="40" width="40">
                                         <span class="avatar-status-online"></span>
                                     </div>
@@ -923,7 +923,7 @@
                             {{-- <ul class="chat-users-list-wrapper media-list">
                                 <li>
                                     <div class="pr-1">
-                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-8.jpg" height="42" width="42" alt="Generic placeholder image">
+                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="{{ asset('app-assets/images/portrait/small/avatar-s-8.jpg')}}" height="42" width="42" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
@@ -939,7 +939,7 @@
                                 </li>
                                 <li>
                                     <div class="pr-1">
-                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-7.jpg" height="42" width="42" alt="Generic placeholder image">
+                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="{{ asset('app-assets/images/portrait/small/avatar-s-7.jpg')}}" height="42" width="42" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
@@ -955,7 +955,7 @@
                                 </li>
                                 <li>
                                     <div class="pr-1">
-                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-5.jpg" height="42" width="42" alt="Generic placeholder image">
+                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="{{ asset('app-assets/images/portrait/small/avatar-s-5.jpg')}}" height="42" width="42" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
@@ -971,7 +971,7 @@
                                 </li>
                                 <li>
                                     <div class="pr-1">
-                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-9.jpg" height="42" width="42" alt="Generic placeholder image">
+                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="{{ asset('app-assets/images/portrait/small/avatar-s-9.jpg')}}" height="42" width="42" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
@@ -987,7 +987,7 @@
                                 </li>
                                 <li>
                                     <div class="pr-1">
-                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-7.jpg" height="42" width="42" alt="Generic placeholder image">
+                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="{{ asset('app-assets/images/portrait/small/avatar-s-7.jpg')}}" height="42" width="42" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
@@ -1003,7 +1003,7 @@
                                 </li>
                                 <li>
                                     <div class="pr-1">
-                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-14.jpg" height="42" width="42" alt="Generic placeholder image">
+                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="{{ asset('app-assets/images/portrait/small/avatar-s-14.jpg')}}" height="42" width="42" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
@@ -1019,7 +1019,7 @@
                                 </li>
                                 <li>
                                     <div class="pr-1">
-                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-3.jpg" height="42" width="42" alt="Generic placeholder image">
+                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="{{ asset('app-assets/images/portrait/small/avatar-s-3.jpg')}}" height="42" width="42" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
@@ -1035,7 +1035,7 @@
                                 </li>
                                 <li>
                                     <div class="pr-1">
-                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="../../../app-assets/images/portrait/small/avatar-s-7.jpg" height="42" width="42" alt="Generic placeholder image">
+                                        <span class="avatar m-0 avatar-md"><img class="media-object rounded-circle" src="{{ asset('app-assets/images/portrait/small/avatar-s-7.jpg')}}" height="42" width="42" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
@@ -1074,7 +1074,7 @@
                                             <div class="sidebar-toggle d-block d-lg-none mr-1"><i
                                                     class="feather icon-menu font-large-1"></i></div>
                                             <div class="avatar user-profile-toggle m-0 m-0 mr-1">
-                                                <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
+                                                <img src="{{ asset('app-assets/images/portrait/small/avatar-s-1.jpg')}}"
                                                     alt="" height="40" width="40" />
                                                 <span class="avatar-status-busy"></span>
                                             </div>
@@ -1090,7 +1090,7 @@
                                             <div class="chat-avatar">
                                                 <a class="avatar m-0" data-toggle="tooltip" href="#"
                                                     data-placement="right" title="" data-original-title="">
-                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
+                                                    <img src="{{ asset('app-assets/images/portrait/small/avatar-s-1.jpg')}}"
                                                         alt="avatar" height="40" width="40" />
                                                 </a>
                                             </div>
@@ -1104,7 +1104,7 @@
                                             <div class="chat-avatar">
                                                 <a class="avatar m-0" data-toggle="tooltip" href="#"
                                                     data-placement="left" title="" data-original-title="">
-                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
+                                                    <img src="{{ asset('app-assets/images/portrait/small/avatar-s-7.jpg')}}"
                                                         alt="avatar" height="40" width="40" />
                                                 </a>
                                             </div>
@@ -1144,7 +1144,7 @@
                                 </span>
                                 <div class="header-profile-sidebar">
                                     <div class="avatar">
-                                        <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
+                                        <img src="{{ asset('app-assets/images/portrait/small/avatar-s-1.jpg')}}"
                                             alt="user_avatar" height="70" width="70">
                                         <span class="avatar-status-busy avatar-status-lg"></span>
                                     </div>
@@ -1186,20 +1186,20 @@
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+    <script src="{{ asset('app-assets/vendors/js/vendors.min.js')}}"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="../../../app-assets/js/core/app-menu.js"></script>
-    <script src="../../../app-assets/js/core/app.js"></script>
-    <script src="../../../app-assets/js/scripts/components.js"></script>
+    <script src="{{ asset('app-assets/js/core/app-menu.js')}}"></script>
+    <script src="{{ asset('app-assets/js/core/app.js')}}"></script>
+    <script src="{{ asset('app-assets/js/scripts/components.js')}}"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../../app-assets/js/scripts/pages/app-chat.js"></script>
+    <script src="{{ asset('app-assets/js/scripts/pages/app-chat.js')}}"></script>
 
     <!-- END: Page JS-->
     <script type="text/javascript">
@@ -1241,7 +1241,7 @@
                             <div class="chat-avatar">
                                 <a class="avatar m-0" data-toggle="tooltip" href="#"
                                     data-placement="left" title="" data-original-title="">
-                                    <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
+                                    <img src="{{ asset('app-assets/images/portrait/small/avatar-s-7.jpg')}}"
                                         alt="avatar" height="40" width="40" />
                                 </a>
                             </div>
@@ -1272,19 +1272,20 @@
                 },
                 success: function(res) {
                     if (res.success) {
+                        $(".user-chats").children('.chats').children('.chat').remove();
                         let html = '';
                         for (let index = 0; index < res.data.length; index++) {
                             let data = res.data[index];
                             console.log(data);
 
-                            if (data.sender_id == sender_id) {
+                            if (data.sender_id == sender_id && data.receiver_id == sender_id) {
 
                                 html += `
                                     <div class="chat chat-left">
                                         <div class="chat-avatar">
                                             <a class="avatar m-0" data-toggle="tooltip" href="#"
                                                 data-placement="left" title="" data-original-title="">
-                                                <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
+                                                <img src="{{ asset('app-assets/images/portrait/small/avatar-s-7.jpg')}}"
                                                     alt="avatar" height="40" width="40" />
                                             </a>
                                         </div>
@@ -1302,7 +1303,7 @@
                                         <div class="chat-avatar">
                                             <a class="avatar m-0" data-toggle="tooltip" href="#"
                                                 data-placement="left" title="" data-original-title="">
-                                                <img src="../../../app-assets/images/portrait/small/avatar-s-7.jpg"
+                                                <img src="{{ asset('app-assets/images/portrait/small/avatar-s-7.jpg')}}"
                                                     alt="avatar" height="40" width="40" />
                                             </a>
                                         </div>
@@ -1355,7 +1356,7 @@
                                 <div class="chat-avatar">
                                     <a class="avatar m-0" data-toggle="tooltip" href="#"
                                         data-placement="right" title="" data-original-title="">
-                                        <img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg"
+                                        <img src="{{ asset('app-assets/images/portrait/small/avatar-s-1.jpg')}}"
                                             alt="avatar" height="40" width="40" />
                                     </a>
                                 </div>
