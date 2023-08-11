@@ -29,11 +29,22 @@ window.Echo = new Echo({
     broadcaster: "pusher",
     cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
     key: import.meta.env.VITE_PUSHER_APP_KEY,
-    wsHost:'127.0.0.1',
-    wsPort: import.meta.env.VITE_PUSHER_PORT ?? 6001,
+    wsHost: import.meta.env.VITE_PUSHER_HOST,
+    wsPort: import.meta.env.VITE_PUSHER_PORT,
     forceTLS: false,
-    disableStats:true,
+    disableStats: true,
     enabledTransports: ["ws", "wss"],
 });
 
 
+// window.Echo = new Echo({
+//     broadcaster: "pusher",
+//     key: import.meta.env.VITE_PUSHER_APP_KEY,
+//     cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
+//     wsHost: import.meta.env.VITE_PUSHER_HOST,
+//     encrypted: true,
+//     wssPort: import.meta.env.VITE_PUSHER_WSS_PORT,
+//     disableStats: true, // Change this to your liking this disables statistics
+//     forceTLS: true,
+//     enabledTransports: ["ws", "wss"],
+// });
